@@ -13,6 +13,8 @@ int pxHeight = 30;
 #define SCREEN_WIDTH 128  // OLED display width, in pixels
 #define SCREEN_HEIGHT 64  // OLED display height, in pixels
 
+#include <ArduinoJson.h>
+#include "jsonParse.h"
 
 
 //------------------------------Added from Hackster------------------------
@@ -145,8 +147,5 @@ void setup() {
 }
 
 void loop() {
-  display.invertDisplay(false);
-  delay(4000);
-  display.invertDisplay(true);
-  delay(4000);
+parseJson();
 }
